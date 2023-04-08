@@ -1,10 +1,14 @@
 package model.dao;
 
+import java.sql.Connection;
 import java.util.List;
 
 import model.entities.Seller;
 
 public class SellerDao {
+
+    public SellerDao(Connection connection) {
+    }
 
     void insert(Seller obj);
 
@@ -12,7 +16,7 @@ public class SellerDao {
 
     void deleteById(Integer id);
 
-    Seller findById(Integer id);
+    public Seller findById(Integer id);
 
     List<Seller> findAll();
 }
